@@ -1,0 +1,14 @@
+# Cria um Bucket
+# Resources é sempre necessário segundo a documentação
+# É case sensitive
+# Precisamos definir tipo e propriedades para criar um bucket
+Resources:
+  
+  MeuPrimeiroBucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: meu-primeiro-bucket-john20201020 #Nomr precisa ser único em TODA AWS
+      BucketEncryption: # Criptografar o bucket é opcional, mas é uma boa prática.
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
